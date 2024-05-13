@@ -16,7 +16,7 @@ function addWarmUpFunctionRoleToResources(service, stage, warmerName, warmerConf
     // eslint-disable-next-line no-param-reassign
     service.resources = {};
   }
-  if (typeof service.resources.Resources !== 'object') {
+  if (!service.resources.Resources) {
     // eslint-disable-next-line no-param-reassign
     service.resources.Resources = {};
   }
